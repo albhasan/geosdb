@@ -25,7 +25,8 @@ Wrapper of Boost' geometry for SciDB.
 	<li>Get SciDB's source code. Then decompress SciDB's files to <code>/home/scidb/dev_dir/scidbtrunk</code></li>
 	<li>Go to <code>cd /home/scidb/dev_dir/scidbtrunk/examples</code> and clone this project: <code>git clone http://github.com/albhasan/geosdb.git</code></li>
 	<li>Modify the file <code>nano /home/scidb/dev_dir/scidbtrunk/examples/CMakeLists.txt</code> and add this line at the end of the file <code>add_subdirectory("geosdb")</code></li>
-	<li>Build SciDB from source code as usual. If SciDB was already build, you must:
+	<li>Build SciDB from source code as usual.</li>
+	<li>Build the plug-in:
 		<ol>
 			<li>Go to <code>cd /home/scidb/dev_dir/scidbtrunk/examples</code></li>
 			<li>Run <code>cmake ..</code></li>
@@ -36,10 +37,11 @@ Wrapper of Boost' geometry for SciDB.
 	</li>
 	<li>Test the installation:
 		<ol>
-			<li>Start the database <code>/home/scidb/dev_dir/scidbtrunk/./run.py stop</code></li>
-			<li>Switch to AFL <code>set lang afl;</code></li>
+			<li>Start the database in case it isn't <code>/home/scidb/dev_dir/scidbtrunk/./run.py start</code></li>
+			<li>Start an iquery session <code>/home/scidb/dev_dir/scidbtrunk/stage/install/bin/./iquery</code></li>
+			<li>Switch iquery to AFL <code>set lang afl;</code></li>
 			<li>Load the plug-in <code>load_library('geosdb');</code></li>
-			<li>Run a test <code>build(<val:bool>[i=0:3,4,0,j=0:3,4,0], ispointinpolygon(double(i), double(j), 'POLYGON ((1.0 1.0, 4.0 1.0, 4.0 4.0, 1.0 4.0, 1.0 1.0))'));</code></li>
+			<li>Run a test <code>build(<val:bool>[i=0:3,4,0,j=0:3,4,0], ispointinpolygon(double(i), double(j), 'POLYGON ((1.0 1.0, 4.0 1.0, 4.0 4.0, 1.0 4.0, 1.0 1.0))'));</code>. This tests if the points made by i and j coordinates are within the given polygon.</li>
 		</ol>	
 	</li>
 
