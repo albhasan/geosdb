@@ -14,7 +14,8 @@ Wrapper of Boost' geometry for SciDB.
 
 <h3>Prerequisites:</h3>
 <ul>
-	<li>SciDB compiled from source code. A Docker image for that can be found <a href="http://github.com/albhasan/docker_scidb">here</a>.</li>
+	<li><a href="http://www.scidb.org/">SciDB</a>'s source code. A Docker image for that can be found <a href="http://github.com/albhasan/docker_scidb">here</a>.</li>
+	<li><a href="http://www.boost.org/">Boost</a> libraries. An installation script is available <a href="http://github.com/albhasan/amazonGreenUp2005/blob/master/installBoost_1570.sh">here</a></li>
 </ul>
 
 
