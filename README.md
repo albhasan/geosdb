@@ -41,7 +41,7 @@ Wrapper of Boost' geometry for SciDB.
 			<li>Start an iquery session <code>/home/scidb/dev_dir/scidbtrunk/stage/install/bin/./iquery</code></li>
 			<li>Switch iquery to AFL <code>set lang afl;</code></li>
 			<li>Load the plug-in <code>load_library('geosdb');</code></li>
-			<li>Run a test <code>build(<val:bool>[i=0:3,4,0,j=0:3,4,0], ispointinpolygon(double(i), double(j), 'POLYGON ((1.0 1.0, 4.0 1.0, 4.0 4.0, 1.0 4.0, 1.0 1.0))'));</code>. This tests if the points made by i and j coordinates are within the given polygon.</li>
+			<li>Run a test <code>build(&lt;val:bool&gt;[i=0:3,4,0,j=0:3,4,0], ispointinpolygon(double(i), double(j), 'POLYGON ((1.0 1.0, 4.0 1.0, 4.0 4.0, 1.0 4.0, 1.0 1.0))'));</code>. This tests if the points made by i and j coordinates are within the given polygon.</li>
 		</ol>	
 	</li>
 
